@@ -1,24 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Zapfino.ttf">
+            <string>Zapfino</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FN1-Dn-kOk">
+                                <rect key="frame" x="112" y="332.5" width="150" height="2.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.66698650079407096" green="0.010980380876311856" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="kDu-6E-IJQ"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.66698650079999999" green="0.01098038088" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCARGANDO IMAGEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yED-vu-WsV">
+                                <rect key="frame" x="63.5" y="285" width="248" height="37.5"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="11"/>
+                                <color key="textColor" red="0.75988659674430914" green="0.01250976480801826" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="oBd-fd-Xh1">
+                                <rect key="frame" x="169" y="352" width="37" height="37"/>
+                                <color key="color" red="0.66698650079999999" green="0.01098038088" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5P2-2b-9y3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FN1-Dn-kOk" firstAttribute="top" secondItem="yED-vu-WsV" secondAttribute="bottom" constant="10" id="7oB-gK-S7T"/>
+                            <constraint firstItem="5P2-2b-9y3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="G6O-Vd-T9M"/>
+                            <constraint firstItem="FN1-Dn-kOk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HO5-aT-kxh"/>
+                            <constraint firstItem="5P2-2b-9y3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TxJ-YA-Vag"/>
+                            <constraint firstItem="yED-vu-WsV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WVy-zl-I9b"/>
+                            <constraint firstItem="5P2-2b-9y3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YHd-P6-UY4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5P2-2b-9y3" secondAttribute="trailing" id="cMZ-Tj-CqE"/>
+                            <constraint firstItem="oBd-fd-Xh1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cdc-OZ-RSp"/>
+                            <constraint firstItem="oBd-fd-Xh1" firstAttribute="top" secondItem="FN1-Dn-kOk" secondAttribute="bottom" constant="18" id="kSA-e4-5qB"/>
+                            <constraint firstItem="FN1-Dn-kOk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sXR-xk-3rl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="barraProgreso" destination="FN1-Dn-kOk" id="x7e-H0-aDe"/>
+                        <outlet property="vistaImagen" destination="5P2-2b-9y3" id="t2Z-u0-Viv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
